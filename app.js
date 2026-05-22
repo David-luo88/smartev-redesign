@@ -437,7 +437,7 @@ function closingPage() {
           <img src="${ASSET}closing_vision_viz.png" alt="Future Vision" />
         </div>
       </div>
-      <div class="nav-footer" style="padding:0 100px">
+      <div class="nav-footer" style="margin:0 100px 28px">
         ${button("← 返回首頁", 0)}
         ${button("重新體驗智慧旅程 →", 1, "primary")}
       </div>

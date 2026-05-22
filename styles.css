@@ -134,7 +134,7 @@ button:focus-visible {
 
 .page-shell {
   height: 100%;
-  padding: 52px 92px 0;
+  padding: 52px 92px 28px;
   display: flex;
   flex-direction: column;
 }
@@ -172,8 +172,8 @@ h4 {
 }
 
 .nav-footer {
-  height: 82px;
-  flex: 0 0 82px;
+  height: 76px;
+  flex: 0 0 76px;
   border-top: 1px solid rgba(77, 214, 255, 0.16);
   display: flex;
   align-items: center;
@@ -361,8 +361,8 @@ h4 {
 .split > .image-frame {
   flex: 1.08 1 0;
   width: 100%;
-  height: 560px;
-  max-height: 560px;
+  height: 532px;
+  max-height: 532px;
   min-width: 0;
 }
 
@@ -701,7 +701,7 @@ h4 {
 .progress-rail {
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 34px;
   z-index: 5;
   transform: translateX(-50%);
   display: flex;

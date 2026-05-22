@@ -134,7 +134,7 @@ button:focus-visible {
 
 .page-shell {
   height: 100%;
-  padding: 60px 100px 0;
+  padding: 52px 92px 0;
   display: flex;
   flex-direction: column;
 }
@@ -143,16 +143,17 @@ button:focus-visible {
   display: flex;
   align-items: flex-start;
   gap: 36px;
-  margin-bottom: 48px;
+  margin-bottom: 34px;
 }
 
 .page-num {
   font-family: var(--font-mono);
   color: rgba(77, 214, 255, 0.82);
-  font-size: 112px;
-  line-height: 0.82;
+  font-size: 106px;
+  line-height: 1;
   font-weight: 300;
   text-shadow: var(--glow);
+  min-width: 176px;
 }
 
 h1,
@@ -171,7 +172,8 @@ h4 {
 }
 
 .nav-footer {
-  height: 100px;
+  height: 82px;
+  flex: 0 0 82px;
   border-top: 1px solid rgba(77, 214, 255, 0.16);
   display: flex;
   align-items: center;
@@ -185,9 +187,10 @@ h4 {
 }
 
 .btn {
+  min-height: 44px;
   border: 1px solid rgba(77, 214, 255, 0.36);
   border-radius: 999px;
-  padding: 12px 30px;
+  padding: 10px 28px;
   color: var(--ink);
   background: rgba(7, 24, 39, 0.58);
   font-family: var(--font-display);
@@ -349,9 +352,23 @@ h4 {
 
 .split {
   flex: 1;
+  min-height: 0;
   display: flex;
   align-items: center;
-  gap: 80px;
+  gap: 56px;
+}
+
+.split > .image-frame {
+  flex: 1.08 1 0;
+  width: 100%;
+  height: 560px;
+  max-height: 560px;
+  min-width: 0;
+}
+
+.split > .image-frame + *,
+.split > * + .image-frame {
+  min-width: 0;
 }
 
 .why-content {

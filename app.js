@@ -180,9 +180,9 @@ function whatPage() {
             <div class="more">了解更多 →</div>
           </button>
         </div>
-        <button class="overview-card glass" type="button" data-tab="23" style="flex:0 0 280px">
-          <h3 style="font-size:40px">智慧電動車平台</h3>
-          <p style="font-size:20px;max-width:900px;margin:0 auto">對 OEM 開放的平台，專門為客戶進行智駕模型訓練與 Agent 部署，讓客戶在保有技術核心與 Data 主權的同時，也可以在量產後持續進化智駕功能。</p>
+        <button class="overview-card glass" type="button" data-tab="23" style="flex:0 0 220px">
+          <h3 style="font-size:36px">智慧電動車平台</h3>
+          <p style="font-size:18px;max-width:920px;margin:0 auto">對 OEM 開放的平台，專門為客戶進行智駕模型訓練與 Agent 部署，讓客戶在保有技術核心與 Data 主權的同時，也可以在量產後持續進化智駕功能。</p>
           <div class="more">了解更多 →</div>
         </button>
       </div>
@@ -437,7 +437,7 @@ function closingPage() {
           <img src="${ASSET}closing_vision_viz.png" alt="Future Vision" />
         </div>
       </div>
-      <div class="nav-footer" style="margin:0 100px 28px">
+      <div class="nav-footer" style="margin:0 100px 56px">
         ${button("← 返回首頁", 0)}
         ${button("重新體驗智慧旅程 →", 1, "primary")}
       </div>

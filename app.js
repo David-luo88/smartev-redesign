@@ -435,7 +435,7 @@ function closingPage() {
         ${button("← 返回首頁", 0)}
         <div class="nav-group">
           ${button("← 上一頁", 31)}
-          ${button("重新體驗智慧旅程 →", 1, "primary")}
+          ${button("重新體驗智慧旅程 →", 0, "primary")}
         </div>
       </div>
     </section>

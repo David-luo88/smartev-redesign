@@ -67,7 +67,7 @@ function rail() {
 function homePage() {
   const cards = [
     { id: 1, title: "為什麼 (Why)", subtitle: "做智慧電動車平台" },
-    { id: 2, title: "什麼是 (What)", subtitle: "何謂智慧電動車平台" },
+    { id: 2, title: "什麼是 (What)", subtitle: "智慧電動車平台" },
     { id: 3, title: "如何能 (How)", subtitle: "持續運作與創造價值" }
   ];
   return `
@@ -101,8 +101,8 @@ function whyPage() {
         <div class="problem-list">
           ${[
             ["技術黑盒", "無法掌握核心演算法與模型，被供應商綁定"],
-            ["高昂代價", "每次更新須重新談判、整合，成本失控"],
-            ["量產即過時", "車輛出廠後智能功能停止進化，用戶體驗停滯"]
+            ["高昂代價", "每次設計須重新談判、整合，成本失控"],
+            ["量產即過時", "車輛出廠後智慧功能停止進化，用戶體驗停滯"]
           ].map(([title, text], index) => `
             <div class="problem-card glass animate-slide-up delay-${200 + index * 100}">
               <h4>${title}</h4>
@@ -307,9 +307,9 @@ function dataFlowMarkup() {
         <text x="587" y="83" text-anchor="middle" fill="var(--ink)" font-family="var(--font-serif)" font-size="15">Agent 代理</text>
 
         ${flowBox("car-box", 5, 45, 155, 270, "車輛應用")}
-        <text x="82.5" y="105" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">智慧座艙</text>
-        <text x="82.5" y="133" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">智慧助理</text>
-        <text x="82.5" y="161" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">智慧駕駛</text>
+        <text x="82.5" y="105" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">AI智慧座艙</text>
+        <text x="82.5" y="133" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">AI智慧助理</text>
+        <text x="82.5" y="161" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">AI智慧駕駛</text>
         <rect x="17" y="215" width="131" height="70" rx="5" fill="rgba(77,214,255,0.06)" stroke="rgba(77,214,255,0.28)"></rect>
         <text x="82.5" y="259" text-anchor="middle" fill="var(--muted)" font-family="var(--font-mono)" font-size="13">Vehicle</text>
 

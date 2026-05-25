@@ -393,10 +393,7 @@ function valuePage() {
         </div>
         <div style="flex:1">
           <div class="value-story animate-slide-up delay-300">
-            <p class="value-lead">
-              <strong>從產品交付到平台共生</strong>
-              <span>平台讓數據、模型、OTA 與用戶體驗形成持續運轉的成長系統。</span>
-            </p>
+            <h3 class="value-lead">從產品交付到平台共生</h3>
             <div class="value-list">
               ${values.map(([title, detail]) => `
                 <div class="value-item">
@@ -405,7 +402,7 @@ function valuePage() {
                 </div>
               `).join("")}
             </div>
-            <p class="value-note">當每一次上路都能回流成下一次更新，每一台 <span>Foxconn inside</span> 的車輛，都會越開越聰明。</p>
+            <p class="value-note">每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
           </div>
         </div>
       </div>

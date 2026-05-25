@@ -603,7 +603,7 @@ function render() {
 
   app.innerHTML = `
     <div class="viewport">
-      <main class="stage" style="transform:scale(${scale})">
+      <main class="stage" style="--stage-scale:${scale}">
         ${content}
         ${rail()}
       </main>
@@ -622,9 +622,9 @@ function render() {
 }
 
 function resize() {
-  scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+  scale = Math.min(window.innerWidth / 1920, window.innerHeight / 1080, 1) * 0.985;
   const stage = app.querySelector(".stage");
-  if (stage) stage.style.transform = `scale(${scale})`;
+  if (stage) stage.style.setProperty("--stage-scale", scale);
 }
 
 window.addEventListener("resize", resize);

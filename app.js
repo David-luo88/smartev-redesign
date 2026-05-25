@@ -32,26 +32,16 @@ function button(label, tab, variant = "") {
   return `<button class="btn ${variant}" type="button" data-tab="${tab}">${label}</button>`;
 }
 
-function icon(name) {
-  const common = `class="agent-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"`;
-  const paths = {
-    search: `<circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path><path d="M8.8 11h4.4"></path>`,
-    simulate: `<path d="M4 7h16"></path><path d="M7 4v6"></path><path d="M17 4v6"></path><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M8 13h3"></path><path d="M13 16h3"></path>`,
-    chip: `<rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M9 1v4"></path><path d="M15 1v4"></path><path d="M9 19v4"></path><path d="M15 19v4"></path><path d="M1 9h4"></path><path d="M1 15h4"></path><path d="M19 9h4"></path><path d="M19 15h4"></path>`
-  };
-  return `<svg ${common}>${paths[name]}</svg>`;
-}
-
 function frame(src, alt, extra = "") {
   return `<div class="image-frame ${extra}"><img src="${ASSET}${src}" alt="${alt}" loading="lazy" /></div>`;
 }
 
-function pageHead(num, title, subtitle, small = false) {
+function pageHead(num, title, subtitle) {
   return `
     <div class="page-head animate-slide-up">
-      <div class="page-num">${num}</div>
-      <div>
-        <h2 style="font-size:${small ? 40 : 56}px;font-weight:300;color:var(--accent);margin-bottom:10px;text-shadow:var(--glow)">${title}</h2>
+      <div class="page-title-block">
+        <div class="page-num">${num}</div>
+        <h2 class="page-title">${title}</h2>
         <div class="eyebrow">${subtitle}</div>
       </div>
     </div>
@@ -141,13 +131,7 @@ function whyPage() {
   const slide = slides[whyIndex];
   return `
     <section class="screen page-shell">
-      <div class="page-head animate-slide-up">
-        <div class="page-num">${slide.num}</div>
-        <div>
-          <h2 style="font-size:56px;font-weight:300;color:var(--accent);margin-bottom:8px">${slide.title}</h2>
-          <div class="eyebrow">${slide.subtitle}</div>
-        </div>
-      </div>
+      ${pageHead(slide.num, slide.title, slide.subtitle)}
       <div class="split" style="flex-direction:${whyIndex === 0 ? "row" : "row-reverse"}">
         ${frame(slide.image, slide.title, "animate-slide-up delay-200")}
         <div class="why-content">${slide.body}</div>
@@ -166,7 +150,7 @@ function whyPage() {
 function whatPage() {
   return `
     <section class="screen page-shell">
-      ${pageHead("02", "什麼是智慧電動車平台產品", "WHAT IS SMART EV PLATFORM")}
+      ${pageHead("02", "什麼是智慧電動車平台產品", "AI 賦能，驅動整車智慧化全面升級")}
       <div class="overview-grid">
         <div class="overview-row">
           <button class="overview-card glass" type="button" data-tab="21">
@@ -202,7 +186,7 @@ function applicationsPage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.1", "三大智慧應用", "THREE CORE SMART APPLICATIONS")}
+      ${pageHead("02.1", "三大智慧應用", "打造沉浸式的 AI 智慧駕乘體驗")}
       <div class="apps-grid">
         ${items.map(([name, image, detail], index) => `
           <article class="app-card animate-slide-up delay-${200 + index * 100}">
@@ -225,20 +209,19 @@ function applicationsPage() {
 
 function agenticPage() {
   const cards = [
-    ["search", "極端場景挖掘", "AI Agent 自動從海量數據中，找出罕見但關鍵的特殊場景，不需要人工逐筆整理"],
-    ["simulate", "高擬真模擬生成", "以生成式 AI 重建高擬真場景，大幅降低實車測試成本與週期"],
-    ["chip", "精準除錯與優化", "大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
+    ["極端場景挖掘", "AI Agent 自動從海量數據中，找出罕見但關鍵的特殊場景，不需要人工逐筆整理"],
+    ["高擬真模擬生成", "以生成式 AI 重建高擬真場景，大幅降低實車測試成本與週期"],
+    ["精準除錯與優化", "大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.2", "Agentic AI 加速量產迭代", "ACCELERATING PRODUCTION ITERATION")}
+      ${pageHead("02.2", "Agentic AI 加速量產迭代", "重構開發流程，上市快人一步")}
       <div class="split">
         ${frame("agent_iteration_viz.png", "Agentic AI Iteration", "animate-slide-up delay-200")}
         <div style="flex:1.2">
           <div class="agent-grid">
-            ${cards.map(([iconName, title, detail], index) => `
+            ${cards.map(([title, detail], index) => `
               <article class="agent-card glass animate-slide-up delay-${200 + index * 100}">
-                ${icon(iconName)}
                 <div>
                   <h4>${title}</h4>
                   <p>${detail}</p>
@@ -267,7 +250,7 @@ function platformPage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.3", "從車端到雲端，再回到車端", "CLOSED-LOOP DATA INTELLIGENCE")}
+      ${pageHead("02.3", "AI 驅動數據閉環", "建立車端到雲端持續進化循環")}
       <div class="split">
         ${frame("cloud_loop_viz.png", "Cloud Intelligence Loop", "animate-slide-up delay-200")}
         <div class="loop-list">
@@ -373,7 +356,7 @@ function flowLine(id, d, length) {
 function howPage() {
   return `
     <section class="screen page-shell">
-      ${pageHead("03", "數據循環，驅動進化，創造收益", "HOW IT WORKS & VALUE", true)}
+      ${pageHead("03", "數據循環，驅動進化，創造收益", "車雲協同，閉環迭代，持續強化模型能力")}
       <div class="how-intro animate-slide-up delay-300">
         <p>車輛持續回傳數據，智慧平台進行 AI 訓練與模型迭代。</p>
         <p>訓練完成後，透過 OTA 線上更新，讓每台車越來越聰明。</p>
@@ -401,7 +384,7 @@ function valuePage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("03.1", "OEM 真正得到什麼", "WHAT OEM REALLY GAINS")}
+      ${pageHead("03.1", "OEM 真正得到什麼", "技術自主，掌握在我")}
       <div class="split">
         <div style="flex:1.2;display:flex;justify-content:center" class="animate-slide-up delay-200">
           <div class="image-frame" style="width:100%;max-width:650px;aspect-ratio:1/1">
@@ -409,20 +392,17 @@ function valuePage() {
           </div>
         </div>
         <div style="flex:1">
-          <div class="animate-slide-up delay-300" style="margin-bottom:40px">
-            <h3 style="font-size:32px;color:var(--accent);font-weight:300;margin-bottom:20px">從產品交付到平台共生</h3>
+          <div class="value-story animate-slide-up delay-300">
+            <h3 class="value-lead">從產品交付到平台共生</h3>
             <div class="value-list">
               ${values.map(([title, detail]) => `
-                <div>
-                  <span class="value-dot"></span>
-                  <span><strong>${title}：</strong>${detail}</span>
+                <div class="value-item">
+                  <strong>${title}</strong>
+                  <span>${detail}</span>
                 </div>
               `).join("")}
             </div>
-          </div>
-          <div class="callout glass animate-slide-up delay-400">
-            <div class="check-mark">✓</div>
-            <p>每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
+            <p class="value-note">每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
           </div>
         </div>
       </div>

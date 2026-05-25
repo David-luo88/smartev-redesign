@@ -32,32 +32,17 @@ function button(label, tab, variant = "") {
   return `<button class="btn ${variant}" type="button" data-tab="${tab}">${label}</button>`;
 }
 
-function icon(name) {
-  const common = `class="agent-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"`;
-  const paths = {
-    search: `<circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.2-3.2"></path><path d="M8.8 11h4.4"></path>`,
-    simulate: `<path d="M4 7h16"></path><path d="M7 4v6"></path><path d="M17 4v6"></path><rect x="4" y="7" width="16" height="13" rx="2"></rect><path d="M8 13h3"></path><path d="M13 16h3"></path>`,
-    chip: `<rect x="7" y="7" width="10" height="10" rx="2"></rect><path d="M9 1v4"></path><path d="M15 1v4"></path><path d="M9 19v4"></path><path d="M15 19v4"></path><path d="M1 9h4"></path><path d="M1 15h4"></path><path d="M19 9h4"></path><path d="M19 15h4"></path>`
-  };
-  return `<svg ${common}>${paths[name]}</svg>`;
-}
-
 function frame(src, alt, extra = "") {
   return `<div class="image-frame ${extra}"><img src="${ASSET}${src}" alt="${alt}" loading="lazy" /></div>`;
 }
 
 function pageHead(num, title, subtitle) {
-  const [major, minor] = num.split(".");
-  const section = navMap.find((item) => item.num === major);
-  const sectionLabel = section ? section.label : "SMART EV";
   return `
     <div class="page-head animate-slide-up">
       <div class="page-num-stack">
-        <div class="page-num">${major}</div>
-        ${minor ? `<div class="page-subnum">.${minor}</div>` : ""}
+        <div class="page-num">${num}</div>
       </div>
       <div class="page-title-block">
-        <div class="section-kicker">${sectionLabel}</div>
         <h2 class="page-title">${title}</h2>
         <div class="eyebrow">${subtitle}</div>
       </div>
@@ -226,9 +211,9 @@ function applicationsPage() {
 
 function agenticPage() {
   const cards = [
-    ["search", "極端場景挖掘", "AI Agent 自動從海量數據中，找出罕見但關鍵的特殊場景，不需要人工逐筆整理"],
-    ["simulate", "高擬真模擬生成", "以生成式 AI 重建高擬真場景，大幅降低實車測試成本與週期"],
-    ["chip", "精準除錯與優化", "大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
+    ["極端場景挖掘", "AI Agent 自動從海量數據中，找出罕見但關鍵的特殊場景，不需要人工逐筆整理"],
+    ["高擬真模擬生成", "以生成式 AI 重建高擬真場景，大幅降低實車測試成本與週期"],
+    ["精準除錯與優化", "大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
   ];
   return `
     <section class="screen page-shell">
@@ -237,9 +222,8 @@ function agenticPage() {
         ${frame("agent_iteration_viz.png", "Agentic AI Iteration", "animate-slide-up delay-200")}
         <div style="flex:1.2">
           <div class="agent-grid">
-            ${cards.map(([iconName, title, detail], index) => `
+            ${cards.map(([title, detail], index) => `
               <article class="agent-card glass animate-slide-up delay-${200 + index * 100}">
-                ${icon(iconName)}
                 <div>
                   <h4>${title}</h4>
                   <p>${detail}</p>
@@ -414,16 +398,13 @@ function valuePage() {
             <h3 class="value-heading">從產品交付到平台共生</h3>
             <div class="value-list">
               ${values.map(([title, detail]) => `
-                <div>
-                  <span class="value-dot"></span>
-                  <span><strong>${title}：</strong>${detail}</span>
+                <div class="value-item">
+                  <strong>${title}</strong>
+                  <span>${detail}</span>
                 </div>
               `).join("")}
             </div>
-          </div>
-          <div class="callout glass animate-slide-up delay-400">
-            <div class="check-mark">✓</div>
-            <p>每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
+            <p class="value-note">每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
           </div>
         </div>
       </div>

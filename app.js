@@ -172,7 +172,7 @@ function whatPage() {
       </div>
       <div class="nav-footer">
         ${button("← 回首頁", 0)}
-        ${button("大模型應用 →", 21, "primary")}
+        ${button("三大智慧應用 →", 21, "primary")}
       </div>
     </section>
   `;

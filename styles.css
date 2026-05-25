@@ -381,25 +381,25 @@ h4 {
 .problem-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 18px;
 }
 
 .problem-card {
-  padding: 24px 32px;
+  padding: 22px 32px;
   border-left: 4px solid var(--accent);
   border-radius: 12px;
 }
 
 .problem-card h4 {
   color: var(--accent-2);
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 8px;
 }
 
 .problem-card p {
   color: var(--ink);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.55;
 }
 
 .why-copy {

@@ -214,7 +214,10 @@ function applicationsPage() {
       </div>
       <div class="nav-footer animate-slide-up delay-600">
         ${button("← 回首頁", 0)}
-        ${button("Agentic AI →", 22, "primary")}
+        <div class="nav-group">
+          ${button("← 上一頁", 2)}
+          ${button("Agentic AI →", 22, "primary")}
+        </div>
       </div>
     </section>
   `;
@@ -245,7 +248,10 @@ function agenticPage() {
       </div>
       <div class="nav-footer">
         ${button("← 回首頁", 0)}
-        ${button("智慧電動車平台 →", 23, "primary")}
+        <div class="nav-group">
+          ${button("← 上一頁", 21)}
+          ${button("智慧電動車平台 →", 23, "primary")}
+        </div>
       </div>
     </section>
   `;
@@ -277,7 +283,7 @@ function platformPage() {
       <div class="nav-footer">
         ${button("← 回首頁", 0)}
         <div class="nav-group">
-          ${button("← 返回產品介紹", 2)}
+          ${button("← 上一頁", 22)}
           ${button("平台運作 →", 3, "primary")}
         </div>
       </div>
@@ -375,7 +381,10 @@ function howPage() {
       </div>
       <div class="nav-footer animate-slide-up delay-700">
         ${button("← 回首頁", 0)}
-        ${button("OEM 真正得到什麼 →", 31, "primary")}
+        <div class="nav-group">
+          ${button("← 上一頁", 23)}
+          ${button("OEM 真正得到什麼 →", 31, "primary")}
+        </div>
       </div>
     </section>
   `;
@@ -417,7 +426,10 @@ function valuePage() {
       </div>
       <div class="nav-footer">
         ${button("← 回首頁", 0)}
-        ${button("結語展望：越開越聰明 →", 32, "primary")}
+        <div class="nav-group">
+          ${button("← 上一頁", 3)}
+          ${button("結語展望：越開越聰明 →", 32, "primary")}
+        </div>
       </div>
     </section>
   `;
@@ -439,7 +451,10 @@ function closingPage() {
       </div>
       <div class="nav-footer" style="margin:0 100px 56px">
         ${button("← 返回首頁", 0)}
-        ${button("重新體驗智慧旅程 →", 1, "primary")}
+        <div class="nav-group">
+          ${button("← 上一頁", 31)}
+          ${button("重新體驗智慧旅程 →", 1, "primary")}
+        </div>
       </div>
     </section>
   `;

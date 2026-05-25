@@ -180,9 +180,9 @@ function whatPage() {
             <div class="more">了解更多 →</div>
           </button>
         </div>
-        <button class="overview-card glass" type="button" data-tab="23" style="flex:0 0 220px">
-          <h3 style="font-size:36px">智慧電動車平台</h3>
-          <p style="font-size:18px;max-width:920px;margin:0 auto">對 OEM 開放的平台，專門為客戶進行智駕模型訓練與 Agent 部署，讓客戶在保有技術核心與 Data 主權的同時，也可以在量產後持續進化智駕功能。</p>
+        <button class="overview-card glass" type="button" data-tab="23" style="flex:0 0 250px">
+          <h3>智慧電動車平台</h3>
+          <p style="max-width:980px;margin:0 auto">對 OEM 開放的平台，專門為客戶進行智駕模型訓練與 Agent 部署，讓客戶在保有技術核心與 Data 主權的同時，也可以在量產後持續進化智駕功能。</p>
           <div class="more">了解更多 →</div>
         </button>
       </div>

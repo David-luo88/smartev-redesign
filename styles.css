@@ -404,8 +404,8 @@ h4 {
 
 .why-copy {
   color: var(--muted);
-  font-size: 24px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.65;
 }
 
 .why-copy strong {
@@ -437,14 +437,14 @@ h4 {
 }
 
 .overview-row {
-  flex: 0 0 255px;
+  flex: 0 0 275px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
 .overview-card {
-  padding: 30px 36px;
+  padding: 34px 38px;
   border-radius: 16px;
   text-align: center;
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
@@ -457,14 +457,14 @@ h4 {
 }
 
 .overview-card h3 {
-  font-size: 34px;
-  margin-bottom: 14px;
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
 .overview-card p {
   color: var(--muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.55;
 }
 
 .overview-card .more {
@@ -497,8 +497,8 @@ h4 {
 
 .app-card p {
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.8;
+  font-size: 20px;
+  line-height: 1.65;
 }
 
 .agent-grid {
@@ -508,7 +508,8 @@ h4 {
 }
 
 .agent-card {
-  padding: 32px;
+  min-height: 190px;
+  padding: 30px 32px;
   border-left: 4px solid var(--accent);
   border-radius: 14px;
 }
@@ -519,14 +520,14 @@ h4 {
 
 .agent-card h4 {
   color: var(--ink);
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 12px;
 }
 
 .agent-card p {
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .agent-icon {
@@ -564,14 +565,14 @@ h4 {
 }
 
 .loop-item h4 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 8px;
 }
 
 .loop-item p {
   color: var(--muted);
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .how-intro {
@@ -613,13 +614,13 @@ h4 {
 
 .value-list span {
   color: var(--muted);
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 20px;
+  line-height: 1.55;
 }
 
 .value-list strong {
   color: var(--ink);
-  font-size: 20px;
+  font-size: 28px;
 }
 
 .callout {

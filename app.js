@@ -101,7 +101,7 @@ function whyPage() {
         <div class="problem-list">
           ${[
             ["技術黑盒", "無法掌握核心演算法與模型，被供應商綁定"],
-            ["高昂代價", "每次設計須重新談判、整合，成本失控"],
+            ["高昂代價", "每次設計變更須重新談判、整合，成本失控"],
             ["量產即過時", "車輛出廠後智慧功能停止進化，用戶體驗停滯"]
           ].map(([title, text], index) => `
             <div class="problem-card glass animate-slide-up delay-${200 + index * 100}">

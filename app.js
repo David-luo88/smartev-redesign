@@ -46,12 +46,19 @@ function frame(src, alt, extra = "") {
   return `<div class="image-frame ${extra}"><img src="${ASSET}${src}" alt="${alt}" loading="lazy" /></div>`;
 }
 
-function pageHead(num, title, subtitle, small = false) {
+function pageHead(num, title, subtitle) {
+  const [major, minor] = num.split(".");
+  const section = navMap.find((item) => item.num === major);
+  const sectionLabel = section ? section.label : "SMART EV";
   return `
     <div class="page-head animate-slide-up">
-      <div class="page-num">${num}</div>
-      <div>
-        <h2 style="font-size:${small ? 40 : 56}px;font-weight:300;color:var(--accent);margin-bottom:10px;text-shadow:var(--glow)">${title}</h2>
+      <div class="page-num-stack">
+        <div class="page-num">${major}</div>
+        ${minor ? `<div class="page-subnum">.${minor}</div>` : ""}
+      </div>
+      <div class="page-title-block">
+        <div class="section-kicker">${sectionLabel}</div>
+        <h2 class="page-title">${title}</h2>
         <div class="eyebrow">${subtitle}</div>
       </div>
     </div>
@@ -141,13 +148,7 @@ function whyPage() {
   const slide = slides[whyIndex];
   return `
     <section class="screen page-shell">
-      <div class="page-head animate-slide-up">
-        <div class="page-num">${slide.num}</div>
-        <div>
-          <h2 style="font-size:56px;font-weight:300;color:var(--accent);margin-bottom:8px">${slide.title}</h2>
-          <div class="eyebrow">${slide.subtitle}</div>
-        </div>
-      </div>
+      ${pageHead(slide.num, slide.title, slide.subtitle)}
       <div class="split" style="flex-direction:${whyIndex === 0 ? "row" : "row-reverse"}">
         ${frame(slide.image, slide.title, "animate-slide-up delay-200")}
         <div class="why-content">${slide.body}</div>
@@ -373,7 +374,7 @@ function flowLine(id, d, length) {
 function howPage() {
   return `
     <section class="screen page-shell">
-      ${pageHead("03", "數據循環，驅動進化，創造收益", "HOW IT WORKS & VALUE", true)}
+      ${pageHead("03", "數據循環，驅動進化，創造收益", "HOW IT WORKS & VALUE")}
       <div class="how-intro animate-slide-up delay-300">
         <p>車輛持續回傳數據，智慧平台進行 AI 訓練與模型迭代。</p>
         <p>訓練完成後，透過 OTA 線上更新，讓每台車越來越聰明。</p>
@@ -410,7 +411,7 @@ function valuePage() {
         </div>
         <div style="flex:1">
           <div class="animate-slide-up delay-300" style="margin-bottom:40px">
-            <h3 style="font-size:32px;color:var(--accent);font-weight:300;margin-bottom:20px">從產品交付到平台共生</h3>
+            <h3 class="value-heading">從產品交付到平台共生</h3>
             <div class="value-list">
               ${values.map(([title, detail]) => `
                 <div>

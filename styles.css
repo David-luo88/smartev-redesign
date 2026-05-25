@@ -12,6 +12,8 @@
   --accent: #4dd6ff;
   --accent-2: #77ffbf;
   --accent-3: #ffb86b;
+  --surface-line: rgba(77, 214, 255, 0.22);
+  --surface-line-hot: rgba(119, 255, 191, 0.58);
   --danger: #ff5c7a;
   --shadow: 0 24px 90px rgba(0, 0, 0, 0.42);
   --glow: 0 0 24px rgba(77, 214, 255, 0.34);
@@ -128,10 +130,10 @@ button:focus-visible {
 }
 
 .eyebrow {
-  color: var(--accent-2);
+  color: rgba(119, 255, 191, 0.9);
   font-family: var(--font-mono);
   font-size: 15px;
-  letter-spacing: 2px;
+  letter-spacing: 1.6px;
   text-transform: uppercase;
 }
 
@@ -144,19 +146,71 @@ button:focus-visible {
 
 .page-head {
   display: flex;
-  align-items: flex-start;
-  gap: 36px;
+  align-items: center;
+  gap: 34px;
   margin-bottom: 34px;
+}
+
+.page-num-stack {
+  width: 154px;
+  min-width: 154px;
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
 }
 
 .page-num {
   font-family: var(--font-mono);
-  color: rgba(77, 214, 255, 0.82);
-  font-size: 106px;
+  color: rgba(77, 214, 255, 0.72);
+  font-size: 96px;
   line-height: 1;
-  font-weight: 300;
+  font-weight: 400;
   text-shadow: var(--glow);
-  min-width: 176px;
+}
+
+.page-subnum {
+  margin-bottom: 12px;
+  padding: 6px 10px;
+  border: 1px solid var(--surface-line);
+  border-radius: 999px;
+  color: var(--accent-2);
+  background: rgba(7, 24, 39, 0.58);
+  font-family: var(--font-mono);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.page-title-block {
+  min-width: 0;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  color: var(--accent-2);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.section-kicker::before {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+.page-title {
+  color: var(--accent);
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  text-shadow: var(--glow);
 }
 
 h1,
@@ -219,7 +273,7 @@ h4 {
 
 .glass {
   background: linear-gradient(145deg, rgba(9, 32, 52, 0.82), rgba(7, 19, 34, 0.62));
-  border: 1px solid rgba(77, 214, 255, 0.22);
+  border: 1px solid var(--surface-line);
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.07);
   backdrop-filter: blur(18px);
 }
@@ -391,7 +445,7 @@ h4 {
 }
 
 .problem-card h4 {
-  color: var(--accent-2);
+  color: var(--ink);
   font-size: 32px;
   margin-bottom: 8px;
 }
@@ -457,6 +511,7 @@ h4 {
 }
 
 .overview-card h3 {
+  color: var(--ink);
   font-size: 32px;
   margin-bottom: 16px;
 }
@@ -470,8 +525,11 @@ h4 {
 .overview-card .more {
   margin-top: 18px;
   color: var(--accent-2);
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
+  font-size: 14px;
   font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .apps-grid {
@@ -491,6 +549,7 @@ h4 {
 }
 
 .app-card h3 {
+  color: var(--ink);
   font-size: 32px;
   margin-bottom: 16px;
 }
@@ -569,6 +628,7 @@ h4 {
 }
 
 .loop-item h4 {
+  color: var(--ink);
   font-size: 32px;
   margin-bottom: 8px;
 }
@@ -625,6 +685,13 @@ h4 {
 .value-list strong {
   color: var(--ink);
   font-size: 32px;
+}
+
+.value-heading {
+  color: var(--ink);
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .callout {

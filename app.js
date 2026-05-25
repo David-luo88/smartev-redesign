@@ -227,7 +227,7 @@ function agenticPage() {
   const cards = [
     ["search", "極端場景挖掘", "AI Agent 自動從海量數據中，找出罕見但關鍵的特殊場景，不需要人工逐筆整理"],
     ["simulate", "高擬真模擬生成", "以生成式 AI 重建高擬真場景，大幅降低實車測試成本與週期"],
-    ["chip", "邊緣算力優化", "精準除錯與優化：大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
+    ["chip", "精準除錯與優化", "大模型自動找出問題、修正 與 優化，持續提升用戶體驗"]
   ];
   return `
     <section class="screen page-shell">
@@ -332,7 +332,9 @@ function dataFlowMarkup() {
 
         ${flowBox("plat-box", 250, 140, 490, 190, "車用資料平台")}
         ${flowBox("dm-box", 270, 185, 185, 130, "資料管理")}
+        <text id="dm-on" x="362.5" y="258" text-anchor="middle" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="12" opacity="0">數據分類清洗儲存</text>
         ${flowBox("ait-box", 535, 185, 185, 130, "AI 訓練")}
+        <text id="ait-on" x="627.5" y="258" text-anchor="middle" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="12" opacity="0">模型訓練及測試驗證</text>
         ${flowBox("comp-box", 790, 45, 155, 270, "合法合規")}
         <text x="867.5" y="125" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">各國法規</text>
         <text x="867.5" y="165" text-anchor="middle" fill="var(--muted)" font-family="var(--font-serif)" font-size="14">資訊安全</text>
@@ -347,8 +349,6 @@ function dataFlowMarkup() {
         <text id="label-step-5" x="530" y="134" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="13" opacity="0">模型迭代</text>
         ${flowLine("line-step-6", "M 627.5,330 L 627.5,365 L 80,365 L 80,315", 620)}
         <text id="label-step-6" x="330" y="355" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="13" opacity="0">線上更新</text>
-        <text id="dm-on" x="362.5" y="171" text-anchor="middle" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="12" opacity="0">✓ 資料管理啟動</text>
-        <text id="ait-on" x="627.5" y="171" text-anchor="middle" fill="var(--accent-2)" font-family="var(--font-mono)" font-size="12" opacity="0">✓ AI 訓練中</text>
       </svg>
       <div id="step-dots" class="step-dots">
         ${[1, 2, 3, 4, 5, 6].map(() => "<span></span>").join("")}

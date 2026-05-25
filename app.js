@@ -150,7 +150,7 @@ function whyPage() {
 function whatPage() {
   return `
     <section class="screen page-shell">
-      ${pageHead("02", "什麼是智慧電動車平台產品", "WHAT IS SMART EV PLATFORM")}
+      ${pageHead("02", "什麼是智慧電動車平台產品", "AI 賦能，驅動整車智慧化全面升級")}
       <div class="overview-grid">
         <div class="overview-row">
           <button class="overview-card glass" type="button" data-tab="21">
@@ -186,7 +186,7 @@ function applicationsPage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.1", "三大智慧應用", "THREE CORE SMART APPLICATIONS")}
+      ${pageHead("02.1", "三大智慧應用", "打造沉浸式的 AI 智慧駕乘體驗")}
       <div class="apps-grid">
         ${items.map(([name, image, detail], index) => `
           <article class="app-card animate-slide-up delay-${200 + index * 100}">
@@ -215,7 +215,7 @@ function agenticPage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.2", "Agentic AI 加速量產迭代", "ACCELERATING PRODUCTION ITERATION")}
+      ${pageHead("02.2", "Agentic AI 加速量產迭代", "重構開發流程，上市快人一步")}
       <div class="split">
         ${frame("agent_iteration_viz.png", "Agentic AI Iteration", "animate-slide-up delay-200")}
         <div style="flex:1.2">
@@ -250,7 +250,7 @@ function platformPage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("02.3", "從車端到雲端，再回到車端", "CLOSED-LOOP DATA INTELLIGENCE")}
+      ${pageHead("02.3", "AI 驅動數據閉環", "建立車端到雲端持續進化循環")}
       <div class="split">
         ${frame("cloud_loop_viz.png", "Cloud Intelligence Loop", "animate-slide-up delay-200")}
         <div class="loop-list">
@@ -356,7 +356,7 @@ function flowLine(id, d, length) {
 function howPage() {
   return `
     <section class="screen page-shell">
-      ${pageHead("03", "數據循環，驅動進化，創造收益", "HOW IT WORKS & VALUE")}
+      ${pageHead("03", "數據循環，驅動進化，創造收益", "車雲協同，閉環迭代，持續強化模型能力")}
       <div class="how-intro animate-slide-up delay-300">
         <p>車輛持續回傳數據，智慧平台進行 AI 訓練與模型迭代。</p>
         <p>訓練完成後，透過 OTA 線上更新，讓每台車越來越聰明。</p>
@@ -384,7 +384,7 @@ function valuePage() {
   ];
   return `
     <section class="screen page-shell">
-      ${pageHead("03.1", "OEM 真正得到什麼", "WHAT OEM REALLY GAINS")}
+      ${pageHead("03.1", "OEM 真正得到什麼", "技術自主，掌握在我")}
       <div class="split">
         <div style="flex:1.2;display:flex;justify-content:center" class="animate-slide-up delay-200">
           <div class="image-frame" style="width:100%;max-width:650px;aspect-ratio:1/1">

@@ -423,8 +423,8 @@ function closingPage() {
       <div class="closing-main">
         <div class="closing-copy">
           <div class="animate-slide-up">
-            <h1>越開越聰明</h1>
-            <p>每一台 <span>Foxconn inside</span> 的車輛，<br />都將越開越聰明。</p>
+            <p>每一台 <span>Foxconn inside</span> 的車輛</p>
+            <h1>都越開越聰明</h1>
           </div>
         </div>
         <div class="closing-img animate-slide-up delay-200">
@@ -450,7 +450,7 @@ class DataFlow {
     this.displayed = 0;
     this.timer = null;
     this.counter = null;
-    this.durations = [0, 1000, 700, 900, 700, 1100, 1400];
+    this.durations = [0, 1000, 700, 900, 1200, 1100, 1400];
     this.pause = 5000;
     this.tokens = [0, 120000, 45000, 380000, 95000, 1850000, 350000];
     this.start();
@@ -502,10 +502,11 @@ class DataFlow {
   update() {
     const active = (n) => this.step !== 0 && this.step >= n;
     const hot = (n) => this.step === n;
-    ["car-box", "dm-box", "ait-box", "ai-box"].forEach((id) => this.box(id, false));
     this.box("car-box", active(1) || active(6));
     this.box("dm-box", active(2));
+    this.box("plat-box", active(2));
     this.box("ait-box", active(4));
+    this.box("comp-box", active(4), 520);
     this.box("ai-box", active(5));
     this.line("line-step-1", active(1), this.durations[1] / 1000);
     this.line("line-step-3", active(3), this.durations[3] / 1000);
@@ -534,9 +535,12 @@ class DataFlow {
     });
   }
 
-  box(id, on) {
+  box(id, on, delay = 0) {
     const rect = this.root.querySelector(`#${id} rect`);
     if (!rect) return;
+    const wasOn = rect.dataset.on === "true";
+    rect.dataset.on = on ? "true" : "false";
+    rect.style.transitionDelay = on && !wasOn ? `${delay}ms` : "0ms";
     rect.setAttribute("fill", on ? "rgba(77,214,255,0.12)" : "rgba(9,24,40,0.68)");
     rect.setAttribute("stroke", on ? "var(--accent-2)" : "rgba(77,214,255,0.35)");
     rect.setAttribute("stroke-width", on ? "2" : "1");

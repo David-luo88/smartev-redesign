@@ -503,19 +503,23 @@ h4 {
 
 .agent-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .agent-card {
-  min-height: 218px;
-  padding: 30px 32px;
+  min-height: 150px;
+  padding: 28px 34px;
   border-left: 4px solid var(--accent);
   border-radius: 14px;
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  column-gap: 22px;
+  align-items: center;
 }
 
 .agent-card.wide {
-  grid-column: 1 / span 2;
+  grid-column: auto;
 }
 
 .agent-card h4 {
@@ -531,9 +535,9 @@ h4 {
 }
 
 .agent-icon {
-  width: 28px;
-  height: 28px;
-  margin-bottom: 14px;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 0;
   color: var(--accent-2);
 }
 

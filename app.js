@@ -237,10 +237,12 @@ function agenticPage() {
         <div style="flex:1.2">
           <div class="agent-grid">
             ${cards.map(([iconName, title, detail], index) => `
-              <article class="agent-card glass ${index === 2 ? "wide" : ""} animate-slide-up delay-${200 + index * 100}">
+              <article class="agent-card glass animate-slide-up delay-${200 + index * 100}">
                 ${icon(iconName)}
-                <h4>${title}</h4>
-                <p>${detail}</p>
+                <div>
+                  <h4>${title}</h4>
+                  <p>${detail}</p>
+                </div>
               </article>
             `).join("")}
           </div>

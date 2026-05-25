@@ -364,8 +364,8 @@ h4 {
 .split > .image-frame {
   flex: 1.08 1 0;
   width: 100%;
-  height: 532px;
-  max-height: 532px;
+  height: 510px;
+  max-height: 510px;
   min-width: 0;
 }
 
@@ -381,31 +381,31 @@ h4 {
 .problem-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 16px;
 }
 
 .problem-card {
-  padding: 22px 32px;
+  padding: 20px 32px;
   border-left: 4px solid var(--accent);
   border-radius: 12px;
 }
 
 .problem-card h4 {
   color: var(--accent-2);
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 8px;
 }
 
 .problem-card p {
   color: var(--ink);
-  font-size: 20px;
-  line-height: 1.55;
+  font-size: 24px;
+  line-height: 1.45;
 }
 
 .why-copy {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: 24px;
+  line-height: 1.55;
 }
 
 .why-copy strong {
@@ -420,7 +420,7 @@ h4 {
 
 .quote-block h4 {
   color: var(--ink);
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 16px;
 }
 
@@ -437,14 +437,14 @@ h4 {
 }
 
 .overview-row {
-  flex: 0 0 275px;
+  flex: 0 0 300px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
 .overview-card {
-  padding: 34px 38px;
+  padding: 34px 42px;
   border-radius: 16px;
   text-align: center;
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
@@ -457,14 +457,14 @@ h4 {
 }
 
 .overview-card h3 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 16px;
 }
 
 .overview-card p {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.55;
+  font-size: 24px;
+  line-height: 1.45;
 }
 
 .overview-card .more {
@@ -491,14 +491,14 @@ h4 {
 }
 
 .app-card h3 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 16px;
 }
 
 .app-card p {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.65;
+  font-size: 24px;
+  line-height: 1.45;
 }
 
 .agent-grid {
@@ -508,7 +508,7 @@ h4 {
 }
 
 .agent-card {
-  min-height: 190px;
+  min-height: 218px;
   padding: 30px 32px;
   border-left: 4px solid var(--accent);
   border-radius: 14px;
@@ -520,14 +520,14 @@ h4 {
 
 .agent-card h4 {
   color: var(--ink);
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 12px;
 }
 
 .agent-card p {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 24px;
+  line-height: 1.38;
 }
 
 .agent-icon {
@@ -541,7 +541,7 @@ h4 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 26px;
 }
 
 .loop-item {
@@ -565,14 +565,14 @@ h4 {
 }
 
 .loop-item h4 {
-  font-size: 28px;
+  font-size: 32px;
   margin-bottom: 8px;
 }
 
 .loop-item p {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 24px;
+  line-height: 1.38;
 }
 
 .how-intro {
@@ -586,14 +586,14 @@ h4 {
 
 .how-intro p {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.6;
+  font-size: 24px;
+  line-height: 1.45;
 }
 
 .value-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
 .value-list div {
@@ -614,13 +614,13 @@ h4 {
 
 .value-list span {
   color: var(--muted);
-  font-size: 20px;
-  line-height: 1.55;
+  font-size: 24px;
+  line-height: 1.42;
 }
 
 .value-list strong {
   color: var(--ink);
-  font-size: 28px;
+  font-size: 32px;
 }
 
 .callout {
@@ -647,7 +647,7 @@ h4 {
 
 .callout p {
   color: var(--ink);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
 }
 

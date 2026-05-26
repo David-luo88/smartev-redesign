@@ -100,10 +100,10 @@ function whyPage() {
       body: `
         <div class="problem-list">
           ${[
-            ["技術黑盒", "無法掌握核心演算法與模型，被供應商綁定"],
-            ["高昂代價", "每次設計變更須重新談判、整合，成本失控"],
-            ["量產即過時", "車輛出廠後智慧功能停止進化，用戶體驗停滯"]
-          ].map(([title, text], index) => `
+          ["技術黑盒", "無法掌握核心演算法與模型，被供應商綁定"],
+          ["高昂代價", "每次設計變更須重新談判、整合，成本失控"],
+          ["量產即過時", "車輛出廠後智慧功能停止進化，用戶體驗停滯"]
+        ].map(([title, text], index) => `
             <div class="problem-card glass animate-slide-up delay-${200 + index * 100}">
               <h4>${title}</h4>
               <p>${text}</p>
@@ -245,7 +245,7 @@ function agenticPage() {
 function platformPage() {
   const items = [
     ["1", "數據閉環管理", "車端數據自動回傳、篩選與結構化處理"],
-    ["2", "雲端大模型訓練", "大規模算力加速模型優化，並用 AIGC生成場景"],
+    ["2", "雲端大模型訓練", "大規模算力加速模型優化，並用 AI 自動生成場景(AIGC)"],
     ["3", "OTA 無縫下發", "優化後的模型通過 OTA 回傳車端，實現能力進階"]
   ];
   return `
@@ -379,8 +379,8 @@ function valuePage() {
   const values = [
     ["數據主權", "掌控核心數據與模型，確保技術資產安全。"],
     ["持續演進", "量產後透過 OTA 實現功能進階與性能優化。"],
-    ["加速迭代", "利用 Agentic AI 大幅縮短從研發到上車的週期。"],
-    ["技術自主", "建立自主研發鏈，擺脫供應商鎖定，掌控未來方向。"]
+    ["加速迭代", "利用 Agentic AI 大幅縮短產品開發與迭代週期。"],
+    ["技術自主", "建立自主研發鏈，擺脫供應商技術黑盒。"]
   ];
   return `
     <section class="screen page-shell">
@@ -402,7 +402,7 @@ function valuePage() {
                 </div>
               `).join("")}
             </div>
-            <p class="value-note">每一台 <span>Foxconn inside</span> 的車輛，都將越開越聰明。</p>
+            <p class="value-note">每一台 <span>Foxconn inside</span> 的車輛，都越開越聰明。</p>
           </div>
         </div>
       </div>

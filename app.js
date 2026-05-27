@@ -119,7 +119,7 @@ function whyPage() {
       image: "soul_passing_orb.png",
       body: `
         <div class="why-copy animate-slide-up delay-200">
-          <p>我們提供的是一套<strong>「主權級別」</strong>的智慧化能力——讓車廠拿回產品的靈魂與進化權。</p>
+          <p>我們提供一套智慧化平台，讓車廠能自主掌握數據、模型與功能更新，讓車輛在量產後持續進化。</p>
           <div class="quote-block">
             <h4>賦能者 (Enabler)</h4>
             <p>助力 OEM 從「硬體組裝者」轉型為「數據驅動的智能營運商」。</p>
